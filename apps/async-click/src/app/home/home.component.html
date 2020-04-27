@@ -1,0 +1,22 @@
+<h1 class="text-xl font-bold my-5">StarWars – Planets</h1>
+
+<hr class="border-b-2 mb-5">
+
+<table *ngIf="results$ | async as results" class="table-auto">
+  <thead>
+    <tr>
+      <th class="border p-3 text-left">Name</th>
+      <th class="border p-3 text-left">Diameter</th>
+      <th class="border p-3 text-left">Climate</th>
+      <th class="border p-3 text-left">Gravity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let planet of results">
+      <td class="border p-3">{{planet.name}}</td>
+      <td class="border p-3">{{planet.diameter}}</td>
+      <td class="border p-3">{{planet.climate}}</td>
+      <td class="border p-3">{{planet.gravity}}</td>
+    </tr>
+  </tbody>
+</table>
