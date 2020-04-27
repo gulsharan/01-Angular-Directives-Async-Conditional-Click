@@ -25,7 +25,10 @@
               "apps/async-click/src/favicon.ico",
               "apps/async-click/src/assets"
             ],
-            "styles": ["apps/async-click/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/async-click/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +86,10 @@
               "apps/async-click/tsconfig.app.json",
               "apps/async-click/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/async-click/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/async-click/**"
+            ]
           }
         },
         "test": {
@@ -118,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/async-click-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/async-click-e2e/**"]
+            "tsConfig": [
+              "apps/async-click-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/async-click-e2e/**"
+            ]
           }
         }
       }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -18,6 +18,14 @@ export class HomeComponent implements OnInit {
     this.results$ = this.http
       .get('https://swapi.py4e.com/api/planets')
       .pipe(map((payload: any) => payload.results));
+  }
+
+  showPopularMessage(planet: any) {
+    alert('POPULAR -- AAA');
+  }
+
+  showNotPopularMessage(planet: any) {
+    alert('NOT SO POPULAR -- BBB');
   }
 
 }

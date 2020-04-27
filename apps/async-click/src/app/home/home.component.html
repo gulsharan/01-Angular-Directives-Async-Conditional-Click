@@ -13,7 +13,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let planet of results">
-      <td class="border p-3">{{planet.name}}</td>
+      <td class="border p-3">
+        <a href="javascript:void(0)"
+           [planetPopularityCheck]="planet"
+           (clickIfPopular)="showPopularMessage($event)"
+           (clickIfNotPopular)="showNotPopularMessage($event)"
+           class="text-blue-600 hover:underline">{{planet.name}}</a>
+      </td>
       <td class="border p-3">{{planet.diameter}}</td>
       <td class="border p-3">{{planet.climate}}</td>
       <td class="border p-3">{{planet.gravity}}</td>
