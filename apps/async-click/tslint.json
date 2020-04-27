@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "asyncConditionalClick",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "async-conditional-click",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}
